@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Tombol untuk keluar -->
+    <Button
+        android:id="@+id/btnKeluar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/baseline_login_24"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/purplegelap"/>
+
+    <!-- Judul aplikasi -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="YourSleep"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/purplegelap"/>
+
+    <!-- Tombol untuk menambah data -->
+    <Button
+        android:id="@+id/btnTambahData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ Tambah Data"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:backgroundTint="@color/primary"/>
+
+
+    <!-- TextView untuk menampilkan jam mulai tidur -->
+    <TextView
+        android:id="@+id/tvJamMulai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnTambahData"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Jam Mulai Tidur: "
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <!-- TextView untuk menampilkan jam bangun tidur -->
+    <TextView
+        android:id="@+id/tvJamBangun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJamMulai"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Jam Bangun Tidur: "
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <!-- TextView untuk menampilkan hasil input -->
+    <TextView
+        android:id="@+id/tvHasilInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvJamBangun"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <!-- Grafik batang untuk pola tidur -->
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chartPolaTidur"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/tvHasilInput"
+        android:layout_marginTop="100dp"/>
+
+    <!-- Tombol untuk mereset data -->
+    <Button
+        android:id="@+id/btnResetData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Data"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tvHasilInput"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/primary"/>
+
+</RelativeLayout>
